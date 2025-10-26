@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import DashboardHeader from './DashboardHeader';
-import SummaryCards from './SummaryCards';
-import ExpenseForm from './ExpenseForm';
-import ExpenseTable from './ExpenseTable';
-import api from '../services/api';
+import SummaryCards from '../SummaryCards';
+import ExpenseForm from '../expenses/ExpenseForm';
+import ExpenseTable from '../expenses/ExpenseTable';
+import api from '../../services/api';
 
 const Dashboard = () => {
   const [expenses, setExpenses] = useState([]);
