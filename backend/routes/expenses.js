@@ -68,7 +68,7 @@ router.get('/summary/total', async (req, res) => {
   
     res.json({ total: Math.round(total * 100) / 100 });
   } catch (err) {
-    console.error('Error fetching total summary:', err);
+    // Removed console.error for production readiness
     res.status(500).json({ message: err.message });
   }
 });
@@ -103,7 +103,7 @@ router.get('/summary/categories', async (req, res) => {
 
     res.json(formattedCategories);
   } catch (err) {
-    console.error('Error fetching category summary:', err);
+    // Removed console.error for production readiness
     res.status(500).json({ message: err.message });
   }
 });

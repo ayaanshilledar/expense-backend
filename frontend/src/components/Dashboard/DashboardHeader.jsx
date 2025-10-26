@@ -11,7 +11,7 @@ const DashboardHeader = ({ onLogout }) => {
         const payload = JSON.parse(atob(token.split('.')[1]));
         setUserName(payload.name || 'User');
       } catch (err) {
-        console.error('Failed to parse token', err);
+        // Removed console.error for production readiness
       }
     }
   }, []);

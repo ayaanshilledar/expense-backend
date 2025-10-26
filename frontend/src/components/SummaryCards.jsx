@@ -24,7 +24,7 @@ const SummaryCards = () => {
         const sortedData = (categoryRes.data || []).sort((a, b) => b.total - a.total);
         setCategoryData(sortedData);
       } catch (err) {
-        console.error('❌ Failed to fetch summary data:', err);
+        // Removed console.error for production readiness
         setError("Failed to load data. Please try again.");
       } finally {
         setLoading(false);
